@@ -13,7 +13,7 @@ Data is generated automatically when the model is run. Data generation solves th
 ### Word Segmentation
 
 - **Tool**：[sentencepiece](https://github.com/google/sentencepiece)
-- **Preprocess**：Run `./data/get_corpus.py` , in which we will get bilingual data to build our training, dev and testing set.  The data will be saved in `corpus.en` and `corpus.ch`, with one sentence in each line.
+- **Preprocess**：Run `./data/get_corpus.py` , in which we will get bilingual data to build our training, dev and testing set.  The data will be saved in `corpus.meas` and `corpus.ami`, with one sentence in each line.
 - **Word segmentation model training**: Run `./tokenizer/tokenize.py`, in which the *sentencepiece.SentencePieceTrainer.Train()* mothed is called to train our word segmentation model. After training, `ami.model`，`ami.vocab`，`meas.model` and `meas.vocab` will be saved in `./tokenizer`.  `.model` is the word segmentation model we need and `.vocab` is the vocabulary.
 
 ## Model
